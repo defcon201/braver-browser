@@ -1,5 +1,12 @@
-# Brave Browser
+![Braver Browser](https://i.imgur.com/fPCZKSJ.png)
 
+# Braver Browser
+
+Brave browser without the token and adware.
+
+**In progress. Looking for contributors!**
+
+[Join Braver on Discord](https://discord.gg/XMAyYA4)
 
 ## Overview
 
