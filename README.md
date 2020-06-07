@@ -2,15 +2,15 @@
 
 # Braver Browser
 
-Brave browser without the token and adware.
+A non-profit community-maintained Brave browser without any adware or crypto tokens.
 
-**In progress. Looking for contributors!**
+**Braver is still in progress. Braver is looking for contributors!**
 
 [Join Braver on Discord](https://discord.gg/XMAyYA4)
 
 ## Overview
 
-This repository holds the build tools needed to build the Brave desktop browser for macOS, Windows, and Linux.  In particular, it fetches and syncs code from the projects we define in `package.json` and `src/brave/DEPS`:
+This repository holds the build tools needed to build the Braver desktop browser for macOS, Windows, and Linux.  In particular, it fetches and syncs code from the projects we define in `package.json` and `src/brave/DEPS`:
 
   - [Chromium](https://chromium.googlesource.com/chromium/src.git)
     - Fetches code via `depot_tools`.
@@ -22,28 +22,11 @@ This repository holds the build tools needed to build the Brave desktop browser 
     - Implements Brave's ad-block engine.
     - Linked through [brave/adblock-rust-ffi](https://github.com/brave/adblock-rust-ffi)
 
-## Downloads
-
-You can [visit our website](https://brave.com/download) to get the latest stable release.
-
-## Other repositories
-
-For other versions of our browser, please see:
-
-* iOS - [brave/brave-ios](https://github.com/brave/brave-ios)
-
 ## Contributing
 
 Please see the [contributing guidelines](./CONTRIBUTING.md)
 
-## Community
-
-[Join the Q&A community](https://community.brave.com/) if you'd like to get more involved with Brave. You can [ask for help](https://community.brave.com/c/support-and-troubleshooting),
-[discuss features you'd like to see](https://community.brave.com/c/brave-feature-requests), and a lot more. We'd love to have your help so that we can continue improving Brave.
-
-Help us translate Brave to your language by submitting translations at https://www.transifex.com/brave/brave/
-
-Follow [@brave](https://twitter.com/brave) on Twitter for important news and announcements.
+Follow [@braver](https://twitter.com/BraverBrowser) on Twitter for important news and announcements.
 
 ## Install prerequisites
 
@@ -58,8 +41,8 @@ Follow the instructions for your platform:
 Once you have the prerequisites installed, you can get the code and initialize the build environment.
 
 ```bash
-git clone git@github.com:brave/brave-browser.git
-cd brave-browser
+git clone git@github.com:braver-browser/braver-browser.git
+cd braver-browser
 npm install
 
 # this takes 30-45 minutes to run
@@ -75,7 +58,7 @@ npm config set target_os android
 npm config set target_arch arm
 ```
 
-## Build Brave
+## Build Braver
 The default build type is component.
 
 ```
@@ -110,12 +93,12 @@ npm run build -- Debug
 
 You may also want to try [[using sccache|sccache-for-faster-builds]].
 
-## Run Brave
+## Run Braver
 To start the build:
 
 `npm start [Release|Component|Static|Debug]`
 
-# Update Brave
+# Update Braver
 
 `npm run sync -- [--force] [--init] [--create] [brave_core_ref]`
 
@@ -148,14 +131,14 @@ brave-core> git checkout -b branch_name
 or
 
 ```bash
-brave-browser> npn run sync -- --create branch_name
+braver-browser> npn run sync -- --create branch_name
 ```
 
 ### Checkout an existing branch or tag
 ```bash
-brave-core> git fetch origin
-brave-core> git checkout [-b] branch_name
-brave-core> npm run sync
+braver-core> git fetch origin
+braver-core> git checkout [-b] branch_name
+braver-core> npm run sync
 ...Updating 2 patches...
 ...Updating child dependencies...
 ...Running hooks...
@@ -164,7 +147,7 @@ brave-core> npm run sync
 or
 
 ```bash
-brave-browser> npn run sync --create branch_name
+braver-browser> npn run sync --create branch_name
 ...Updating 2 patches...
 ...Updating child dependencies...
 ...Running hooks...
@@ -172,28 +155,28 @@ brave-browser> npn run sync --create branch_name
 
 ### Update the current branch to latest remote
 ```bash
-brave-core> git pull
-brave-core> npm run sync
+braver-core> git pull
+braver-core> npm run sync
 ...Updating 2 patches...
 ...Updating child dependencies...
 ...Running hooks...
 ```
 
-#### Reset to latest brave-browser master, brave-core master and chromium
+#### Reset to latest braver-browser master, braver-core master and chromium
 ```bash
-brave-browser> git checkout master
-brave-browser> git pull
-brave-browser> npm run sync -- --init
+braver-browser> git checkout master
+braver-browser> git pull
+braver-browser> npm run sync -- --init
 ```
 
 #### When you know that DEPS didn't change, but .patch files did (quickest)
 ```bash
-brave-core> git checkout featureB
-brave-core> git pull
-brave-browser> npm run apply_patches
+braver-core> git checkout featureB
+braver-core> git pull
+braver-browser> npm run apply_patches
 ...Applying 2 patches...
 ```
 
 # Troubleshooting
 
-See [Troubleshooting](https://github.com/brave/brave-browser/wiki/Troubleshooting) for solutions to common problems.
+See [Troubleshooting](https://github.com/braver-browser/braver-browser/wiki/Troubleshooting) for solutions to common problems.
