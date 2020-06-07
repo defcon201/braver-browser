@@ -47,7 +47,7 @@
         "dir": "src/brave",
         "branch": "master",
         "repository": {
-          "url": "https://github.com/brave/brave-core.git"
+          "url": "https://github.com/braver-browser/braver-core.git"
         }
       }
     },
@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brave/brave-browser.git"
+    "url": "git+https://github.com/braver-browser/braver-browser.git"
   },
   "author": {
     "name": "Brave Software <support@brave.com>"
@@ -254,9 +254,9 @@
   ],
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/brave/brave-browser/issues"
+    "url": "https://github.com/braver-browser/brave-browser/issues"
   },
-  "homepage": "https://github.com/brave/brave-browser#readme",
+  "homepage": "https://github.com/braver-browser/brave-browser#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^2.9.0",
