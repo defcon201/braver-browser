@@ -45,7 +45,7 @@
       },
       "brave-core": {
         "dir": "src/brave",
-        "branch": "master",
+        "branch": "strip-ads",
         "repository": {
           "url": "https://github.com/braver-browser/braver-core.git"
         }
