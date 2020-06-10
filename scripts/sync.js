@@ -25,6 +25,7 @@ program
   .option('--all', 'This flag is deprecated and no longer has any effect')
   .option('--force', 'force reset all projects to origin/ref')
   .option('--create', 'create a new branch if needed for [ref]')
+  .option('--no_history', 'do not download the history')
 
 async function RunCommand () {
   program.parse(process.argv)
@@ -73,7 +74,7 @@ async function RunCommand () {
     }
   }
 
-  util.gclientSync(program.init || program.force, program.init, braveCoreRef)
+  util.gclientSync(program.init || program.force, program.init, program.no_history, braveCoreRef)
 
   await util.applyPatches()
 
