@@ -65,6 +65,9 @@ npm install
 # this takes 30-45 minutes to run
 # the Chromium source is downloaded which has a large history
 npm run init
+
+# if you like to run it faster without any history
+npm run init --no-history
 ```
 brave-core based android builds should use `npm run init -- --target_os=android --target_arch=arm` (or whatever cpu type you want to build for)
 
