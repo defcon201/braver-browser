@@ -66,7 +66,7 @@ npm install
 # the Chromium source is downloaded which has a large history
 npm run init
 
-# if you like to run it faster without any history
+# if you'd like to run it faster without downloading Chromium's source history
 npm run init --no-history
 ```
 brave-core based android builds should use `npm run init -- --target_os=android --target_arch=arm` (or whatever cpu type you want to build for)
